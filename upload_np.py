@@ -44,82 +44,89 @@ backups_dir = os.path.join(cwd, 'Backups')
 # -- Open log file for writing and append date/time stamp into file for a new entry
 logfile = 'log.txt'
 log = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), logfile), 'a')
-log.write('\n------------  Begin: '+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+'  ------------ \n')
+log.write('\n\n------------  Begin: '+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+'  ------------ \n')
 
 # Set metadata for all uploads
-metadata = {"experiment_id": 77,
+metadata = {"experiment_id": 31,
             "type": "RAW",
-            "description": "Neutron Probe soil moisture data measured every three weeks (where each file is one day \
-             of data). Measurements are taken across all rings at the EucFACE experiment. ",
-            "creator_email": "g.devine@westernsydney.edu.au",
-            "contributor_names": ['Tom Smith, t.smith@google.com',
-                                  'Jane White, J.White@aol.com',
-                                  'Frank Blank, f.black@yahoo.com'],
-            "label_names": '"Rainfall","Environment","TOA5"',
-            "grant_numbers": '"ZXY7654","PRQ53422"',
-            "related_websites": '"http://www.bom.org.au","http://www.westernsydney.edu.au"',
-            "start_time": '2014-01-01 12:11:10',
-            "end_time": '2014-12-30 14:09:08'
+            "description": "Neutron Probe soil moisture data measured approximately every three weeks, where each \
+                           file represents the reading taken on the date identified in the filename (or in \
+                           the metadata). Measurements are taken across all rings at the EucFACE experiment.",
+            "creator_email": "vinod.kumar@uws.edu.au",
+            "label_names": '"Neutron Probe","Soil Moisture"',
+            "related_websites": '"https://www.westernsydney.edu.au/hie"',
             }
 
 
-def rename_file(file):
+def rename_file(infile):
     """ Returns the renamed filename matching the human-friendly FACE convention
 
-    This function assumes input file is of format FADDMMYY, e.g FA150518
+    This function assumes input file is of format FADDMMYY.TXT, e.g FA150518.TXT
     """
 
-    day = str(file)[2:4]
-    month = str(file)[4:6]
-    year = '20'+str(file)[6:]
+    day = str(infile)[2:4]
+    month = str(infile)[4:6]
+    year = '20'+str(infile)[6:8]
 
     return 'FACE_AUTO_RA_NEUTRON_R_'+year+month+day+'.txt'
 
 
-def main():
-    file_counter = 0
-    for file in data_dir:
-        if file.startswith('FA') and len(file) == 8:
-            log.write('\n*Info: Match found: ' + file)
-            toupload_file_path = os.path.join(data_dir, file)
-            backups_file_path = os.path.join(backups_dir, file)
+def get_datetimes(infile):
+    """ Returns a start and end date/time as extracted from the infile filename
 
-            # 1. Make a backup copy of the file in the Backups directory
-            shutil.copy(toupload_file_path, backups_file_path)
-            log.write('\n*Info: Initial backup made of file ' + file + ' to Backups folder')
-            
-            # 2. Copy the file to Renamed folder and rename it to match naming convention
-            renamed_file = rename_file(file)
-            renamed_file_path = os.path.join(renamed_dir, renamed_file)
-            # Check if file already exists in the Renamed folder
-            if os.path.exists(renamed_file_path):
-                log.write('\n*Warning: File ' + renamed_file + ' already exists in Renamed folder')
-                continue
-            shutil.copy(toupload_file_path, renamed_file_path)
-            log.write('\n*Info: File ' + file + ' moved to Renamed folder and renamed to ' + renamed_file)
+    """
 
-            # 3. Upload the file to HIEv
-            try:
-                hp.upload(api_token, renamed_file_path, metadata)
-                log.write('\n*Info: File ' + file + ' successfully uploaded to HIEv')
-            except Exception as e:
-                log.write('\n*Error: Could not upload file ' + file + ' to HIEv. Error: ' + str(e))
-                continue
+    day = str(infile)[2:4]
+    month = str(infile)[4:6]
+    year = '20'+str(infile)[6:8]
 
-            # 4. Remove the file from both the ToUpload and Renamed folders
-            os.remove(toupload_file_path)
-            os.remove(renamed_file_path)
-            log.write('\n*Info: File ' + file + ' cleaned out of ToUpload and Renamed folders')
-            # Increment counter
-            file_counter += 1
-
-        else:
-            # This file does not match the FA naming convention
-            log.write('\n*WARNING: The file named ' + file + ' does not match upload naming convention - ignoring\n')
-
-    log.write('\n*Info: Run Complete. ' + file_counter + '(s) successfully files uploaded to HIEv')
-    log.write('\n------------  End: ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '  ------------ \n')
+    return year+'-'+month+'-'+day+' 00:00:00', year+'-'+month+'-'+day+' 23:59:59'
 
 
-if __name__ == "__main__":
-    main()
+file_counter = 0
+log.write('\n*Info: Looping over files in Data folder....')
+for file in os.listdir(data_dir):
+    if file.startswith('FA') and file.split('.')[1] == 'TXT':
+        log.write('\n*Info: Match found: ' + file)
+        data_file_path = os.path.join(data_dir, file)
+        backups_file_path = os.path.join(backups_dir, file)
+
+        # 1. Make a backup copy of the file in the Backups directory
+        shutil.copy(data_file_path, backups_file_path)
+        log.write('\n*Info: Initial backup made of file ' + file + ' to Backups folder')
+
+        # 2. Copy the file to Renamed folder and rename it to match naming convention
+        renamed_file = rename_file(file)
+        renamed_file_path = os.path.join(renamed_dir, renamed_file)
+        # Check if file already exists in the Renamed folder
+        if os.path.exists(renamed_file_path):
+            log.write('\n*Warning: File ' + renamed_file + ' already exists in Renamed folder')
+            continue
+        shutil.copy(data_file_path, renamed_file_path)
+        log.write('\n*Info: File ' + file + ' moved to Renamed folder and renamed to ' + renamed_file)
+
+        # 3. Grab the start date/end date from the file name and then upload the file to HIEv
+        try:
+            start_datetime, end_datetime = get_datetimes(file)
+            metadata["start_time"] = start_datetime
+            metadata["end_time"] = end_datetime
+            upload = hp.upload(api_token, renamed_file_path, metadata)
+            log.write('\n*Info: File ' + renamed_file + ' successfully uploaded to HIEv')
+        except Exception as e:
+            log.write('\n*Error: Could not upload file ' + file + ' to HIEv. Error: ' + str(e))
+            continue
+
+        # 4. Remove the file from both the data and Renamed folders
+        os.remove(data_file_path)
+        os.remove(renamed_file_path)
+        log.write('\n*Info: File ' + file + ' cleaned out of Data and Renamed folders')
+        # Increment counter
+        file_counter += 1
+
+    else:
+        # This file does not match the FA naming convention
+        log.write('\n*Warning: The file named ' + file + ' does not match FA naming convention - ignoring')
+
+
+log.write('\n*Info: Run Complete. ' + str(file_counter) + '(s) successfully files uploaded to HIEv')
+log.write('\n------------  End: ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '  ------------ \n')

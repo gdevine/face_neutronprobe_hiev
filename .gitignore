@@ -108,6 +108,14 @@ venv.bak/
 
 # Data files
 Data/
+Backups/
+Renamed/
 *.csv
 *.dat
 *.toa5
+
+# Mac files
+.DS_Store
+
+# Log files
+log.txt
