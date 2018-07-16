@@ -1,0 +1,196 @@
+Probe.ID,Up.depth,Texture,Tex.meas,Bulk.den,Bulk.meas
+13,0,Loamy sand,No,1.53,Yes
+13,25,Loamy sand,No,1.57,Yes
+13,50,Loamy sand,No,1.7,Yes
+13,75,Sandy clay loam,No,1.76,Yes
+13,100,Sandy clay loam,No,1.91,Yes
+13,125,Sandy clay loam,No,1.8,Yes
+13,150,Sandy clay loam,No,1.87,Yes
+13,200,Sandy clay loam,No,1.73,Yes
+13,250,Sandy clay loam,No,1.72,Yes
+13,300,Sandy clay loam,No,1.47,Yes
+13,350,Clay,No,1.71,Yes
+13,400,Clay,No,1.6,Yes
+13,450,Clay,No,1.71,Yes
+43,0,Loamy sand,No,1.61,Yes
+43,25,Loamy sand,No,1.59,Yes
+43,50,Loamy sand,No,1.65,Yes
+43,75,Sandy clay loam,No,1.78,Yes
+43,100,Sandy clay loam,No,1.74,Yes
+43,125,Sandy clay loam,No,1.52,Yes
+43,150,Sandy clay loam,No,1.82,Yes
+43,200,Sandy clay loam,No,1.74,Yes
+43,250,Sandy clay loam,No,1.73,Yes
+43,300,Sandy clay loam,No,1.63,Yes
+43,350,Clay,No,1.65,Yes
+43,400,Clay,No,1.57,Yes
+43,450,Clay,No,1.61,Yes
+63,0,Loamy sand,No,1.27,Yes
+63,25,Loamy sand,No,1.55,Yes
+63,50,Loamy sand,No,1.75,Yes
+63,75,Sandy clay loam,No,1.78,Yes
+63,100,Sandy clay loam,No,1.81,Yes
+63,125,Sandy clay loam,No,1.76,Yes
+63,150,Sandy clay loam,No,1.79,Yes
+63,200,Sandy clay loam,No,1.82,Yes
+63,250,Sandy clay loam,No,1.78,Yes
+63,300,Sandy clay loam,No,1.77,Yes
+63,350,Clay,No,1.75,Yes
+63,400,Clay,No,1.57,Yes
+63,450,Clay,No,1.66,Yes
+11,0,Sand,Yes,1.53,No
+11,25,Sand,Yes,1.57,No
+11,50,Sandy loam,Yes,1.7,No
+11,75,Sandy loam,Yes,1.76,No
+11,100,Sandy loam,Yes,1.91,No
+11,125,Sandy clay loam,No,1.8,No
+11,150,Loamy sand,Yes,1.87,No
+11,200,Sandy loam,Yes,1.73,No
+11,250,Sandy loam,Yes,1.72,No
+11,300,Sandy clay loam,Yes,1.47,No
+11,350,Clay,Yes,1.71,No
+11,400,Clay,Yes,1.6,No
+11,450,Clay,Yes,1.71,No
+12,0,Sand,No,1.53,No
+12,25,Sand,No,1.57,No
+12,50,Sandy loam,No,1.7,No
+12,75,Sandy loam,No,1.76,No
+12,100,Sandy loam,No,1.91,No
+12,125,Sandy clay loam,No,1.8,No
+12,150,Loamy sand,No,1.87,No
+12,200,Sandy loam,No,1.73,No
+12,250,Sandy loam,No,1.72,No
+12,300,Sandy clay loam,No,1.47,No
+12,350,Clay,No,1.71,No
+12,400,Clay,No,1.6,No
+12,450,Clay,No,1.71,No
+21,0,Sand,Yes,1.53,No
+21,25,Sand,Yes,1.57,No
+21,50,Sandy clay,Yes,1.7,No
+21,75,Sandy clay loam,No,1.76,No
+21,100,Sandy loam,Yes,1.91,No
+21,125,Sandy clay loam,No,1.8,No
+21,150,Sandy clay loam,Yes,1.87,No
+21,200,Sandy clay,Yes,1.73,No
+21,250,Clay loam,Yes,1.72,No
+21,300,Sandy loam,Yes,1.47,No
+21,350,Clay,Yes,1.71,No
+21,400,Clay,Yes,1.6,No
+21,450,Sandy clay,Yes,1.71,No
+22,0,Sand,No,1.53,No
+22,25,Sand,No,1.57,No
+22,50,Sandy clay,No,1.7,No
+22,75,Sandy clay loam,No,1.76,No
+22,100,Sandy loam,No,1.91,No
+22,125,Sandy clay loam,No,1.8,No
+22,150,Sandy clay loam,No,1.87,No
+22,200,Sandy clay,No,1.73,No
+22,250,Clay loam,No,1.72,No
+22,300,Sandy loam,No,1.47,No
+22,350,Clay,No,1.71,No
+22,400,Clay,No,1.6,No
+22,450,Sandy clay,No,1.71,No
+31,0,Loamy sand,Yes,1.61,No
+31,25,Sand,Yes,1.59,No
+31,50,Loamy sand,No,1.65,No
+31,75,Sandy clay loam,No,1.78,No
+31,100,Sandy loam,Yes,1.74,No
+31,125,Sandy clay loam,No,1.52,No
+31,150,Sandy clay loam,Yes,1.82,No
+31,200,Sandy loam,Yes,1.74,No
+31,250,Sandy clay loam,Yes,1.73,No
+31,300,Clay,Yes,1.63,No
+31,350,Sandy clay loam,Yes,1.65,No
+31,400,Clay loam,Yes,1.57,No
+31,450,Clay,Yes,1.61,No
+32,0,Loamy sand,No,1.61,No
+32,25,Sand,No,1.59,No
+32,50,Loamy sand,No,1.65,No
+32,75,Sandy clay loam,No,1.78,No
+32,100,Sandy loam,No,1.74,No
+32,125,Sandy clay loam,No,1.52,No
+32,150,Sandy clay loam,No,1.82,No
+32,200,Sandy loam,No,1.74,No
+32,250,Sandy clay loam,No,1.73,No
+32,300,Clay,No,1.63,No
+32,350,Sandy clay loam,No,1.65,No
+32,400,Clay loam,No,1.57,No
+32,450,Clay,No,1.61,No
+41,0,Sandy loam,Yes,1.61,No
+41,25,Loamy sand,Yes,1.59,No
+41,50,Sandy clay loam,Yes,1.65,No
+41,75,Sandy clay loam,No,1.78,No
+41,100,Sandy loam,Yes,1.74,No
+41,125,Sandy clay loam,No,1.52,No
+41,150,Sandy clay loam,Yes,1.82,No
+41,200,Sandy loam,Yes,1.74,No
+41,250,Sandy clay loam,Yes,1.73,No
+41,300,Sandy clay loam,Yes,1.63,No
+41,350,Clay,Yes,1.65,No
+41,400,Clay,Yes,1.57,No
+41,450,Clay,Yes,1.61,No
+42,0,Sandy loam,Yes,1.61,No
+42,25,Loamy sand,Yes,1.59,No
+42,50,Sandy clay loam,Yes,1.65,No
+42,75,Sandy clay loam,No,1.78,No
+42,100,Sandy loam,Yes,1.74,No
+42,125,Sandy clay loam,No,1.52,No
+42,150,Sandy clay loam,Yes,1.82,No
+42,200,Sandy loam,Yes,1.74,No
+42,250,Sandy clay loam,Yes,1.73,No
+42,300,Sandy clay loam,Yes,1.63,No
+42,350,Clay,Yes,1.65,No
+42,400,Clay,Yes,1.57,No
+42,450,Clay,Yes,1.61,No
+51,0,Sandy loam,No,1.61,No
+51,25,Loamy sand,No,1.59,No
+51,50,Loamy sand,No,1.65,No
+51,75,Sandy clay loam,No,1.78,No
+51,100,Sandy clay loam,No,1.74,No
+51,125,Loamy sand,No,1.52,No
+51,150,Loamy sand,No,1.82,No
+51,200,Sandy clay loam,No,1.74,No
+51,250,Sandy clay loam,No,1.73,No
+51,300,Sandy clay loam,No,1.63,No
+51,350,Clay,No,1.65,No
+51,400,Clay,No,1.57,No
+51,450,Clay,No,1.61,No
+52,0,Sandy loam,Yes,1.61,No
+52,25,Loamy sand,Yes,1.59,No
+52,50,Loamy sand,No,1.65,No
+52,75,Sandy clay loam,No,1.78,No
+52,100,Sandy clay loam,No,1.74,No
+52,125,Loamy sand,Yes,1.52,No
+52,150,Loamy sand,Yes,1.82,No
+52,200,Sandy clay loam,Yes,1.74,No
+52,250,Sandy clay loam,Yes,1.73,No
+52,300,Sandy clay loam,Yes,1.63,No
+52,350,Clay,Yes,1.65,No
+52,400,Clay,Yes,1.57,No
+52,450,Clay,Yes,1.61,No
+61,0,Sandy clay loam,Yes,1.27,No
+61,25,Sandy loam,Yes,1.55,No
+61,50,Loamy sand,No,1.75,No
+61,75,Sandy clay loam,No,1.78,No
+61,100,Sandy loam,Yes,1.81,No
+61,125,Clay loam,Yes,1.76,No
+61,150,Clay loam,Yes,1.79,No
+61,200,Sandy clay loam,Yes,1.82,No
+61,250,Sandy clay loam,Yes,1.78,No
+61,300,Sandy clay loam,Yes,1.77,No
+61,350,Clay,No,1.75,No
+61,400,Sandy clay,Yes,1.57,No
+61,450,Clay,Yes,1.66,No
+62,0,Sandy clay loam,Yes,1.27,No
+62,25,Sandy loam,Yes,1.55,No
+62,50,Loamy sand,No,1.75,No
+62,75,Sandy clay loam,No,1.78,No
+62,100,Sandy loam,Yes,1.81,No
+62,125,Clay loam,Yes,1.76,No
+62,150,Clay loam,Yes,1.79,No
+62,200,Sandy clay loam,Yes,1.82,No
+62,250,Sandy clay loam,Yes,1.78,No
+62,300,Sandy clay loam,Yes,1.77,No
+62,350,Clay,No,1.75,No
+62,400,Sandy clay,Yes,1.57,No
+62,450,Clay,Yes,1.66,No

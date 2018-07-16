@@ -162,8 +162,8 @@ for file in os.listdir(data_dir):
             metadata_l1["start_time"] = start_datetime
             metadata_l1["end_time"] = end_datetime
             metadata_l1["parent_filenames[]"] = [renamed_file, 'FACE_SCRIPT_NEUTRON_TXT-2-CSV.zip']
-            # upload = hp.upload(api_token, renamed_file_path, metadata_r)
-            # log.write('\n*Info: File ' + renamed_file + ' successfully uploaded to HIEv')
+            upload = hp.upload(api_token, renamed_file_path, metadata_r)
+            log.write('\n*Info: File ' + renamed_file + ' successfully uploaded to HIEv')
             upload = hp.upload(api_token, l1_file_path, metadata_l1)
             log.write('\n*Info: File ' + l1_file + ' successfully uploaded to HIEv')
         except Exception as e:

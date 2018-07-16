@@ -1,0 +1,126 @@
+Probe.ID,Ring,Location,CO2,Up.depth,Texture,Tex.meas,Bulk.den,Bulk.meas,Sampling,Date.Sampling,WW,DW,GWC,VWC,Date.NP,NP.count
+13,Outside 1,Outside,Ambient,25,Loamy sand,No,1.57,Yes,First,22/08/2012,128.47,123.53,3.999028576,6.278474864,28/08/2012,5129
+13,Outside 1,Outside,Ambient,50,Loamy sand,No,1.7,Yes,First,22/08/2012,127.06,108.24,17.38728751,29.55838877,28/08/2012,13842
+13,Outside 1,Outside,Ambient,100,Sandy clay loam,No,1.91,Yes,First,22/08/2012,80.66,74.89,7.704633462,14.71584991,28/08/2012,9730
+13,Outside 1,Outside,Ambient,125,Sandy clay loam,No,1.8,Yes,First,22/08/2012,105.05,98.45,6.703910615,12.06703911,28/08/2012,8925
+13,Outside 1,Outside,Ambient,150,Sandy clay loam,No,1.87,Yes,First,22/08/2012,153.96,141.91,8.491297301,15.87872595,28/08/2012,9177
+13,Outside 1,Outside,Ambient,200,Sandy clay loam,No,1.73,Yes,First,22/08/2012,174.08,151.48,14.91946132,25.81066807,28/08/2012,12586
+13,Outside 1,Outside,Ambient,250,Sandy clay loam,No,1.72,Yes,First,22/08/2012,92.86,82.07,13.14731327,22.61337882,28/08/2012,11912
+13,Outside 1,Outside,Ambient,300,Sandy clay loam,No,1.47,Yes,First,22/08/2012,99.68,90.92,9.634843819,14.16322041,28/08/2012,9645
+13,Outside 1,Outside,Ambient,350,Clay,No,1.71,Yes,First,22/08/2012,70.36,62.51,12.55799072,21.47416413,28/08/2012,10643
+13,Outside 1,Outside,Ambient,400,Clay,No,1.6,Yes,First,22/08/2012,110.58,91.87,20.36573419,32.5851747,28/08/2012,14209
+13,Outside 1,Outside,Ambient,450,Clay,No,1.71,Yes,First,22/08/2012,82.7,71.37,15.87501751,27.14627995,28/08/2012,13320
+43,Outside 4,Outside,Ambient,25,Loamy sand,No,1.59,Yes,First,28/08/2012,194.88,177.1,10.03952569,15.96284585,4/09/2012,9437
+43,Outside 4,Outside,Ambient,50,Loamy sand,No,1.65,Yes,First,28/08/2012,110.3,102.2,7.925636008,13.07729941,4/09/2012,10131
+43,Outside 4,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,First,28/08/2012,158.65,131.39,20.74739326,36.93036,4/09/2012,17071
+43,Outside 4,Outside,Ambient,100,Sandy clay loam,No,1.74,Yes,First,28/08/2012,86.1,77.23,11.48517416,19.98420303,4/09/2012,12601
+43,Outside 4,Outside,Ambient,125,Sandy clay loam,No,1.52,Yes,First,28/08/2012,105.57,94.63,11.56081581,17.57244003,4/09/2012,11767
+43,Outside 4,Outside,Ambient,150,Sandy clay loam,No,1.82,Yes,First,28/08/2012,101.32,92.33,9.736813603,17.72100076,4/09/2012,11773
+43,Outside 4,Outside,Ambient,200,Sandy clay loam,No,1.74,Yes,First,28/08/2012,116.12,100.15,15.94608088,27.74618073,4/09/2012,14549
+43,Outside 4,Outside,Ambient,250,Sandy clay loam,No,1.73,Yes,First,28/08/2012,100.57,91.32,10.12921594,17.52354358,4/09/2012,10605
+43,Outside 4,Outside,Ambient,300,Sandy clay loam,No,1.63,Yes,First,28/08/2012,121.51,105.88,14.76199471,24.06205138,4/09/2012,10665
+43,Outside 4,Outside,Ambient,350,Clay,No,1.65,Yes,First,28/08/2012,109.3,97.09,12.57596045,20.75033474,4/09/2012,11699
+43,Outside 4,Outside,Ambient,400,Clay,No,1.57,Yes,First,28/08/2012,135.29,122.55,10.39575683,16.32133823,4/09/2012,10653
+43,Outside 4,Outside,Ambient,450,Clay,No,1.61,Yes,First,28/08/2012,124.69,101.4,22.96844181,36.97919132,4/09/2012,15290
+63,Outside 6,Outside,Ambient,25,Loamy sand,No,1.55,Yes,First,23/08/2012,132.07,118.74,11.22620852,17.40062321,28/08/2012,9470
+63,Outside 6,Outside,Ambient,50,Loamy sand,No,1.75,Yes,First,23/08/2012,198.64,182.64,8.760402979,15.33070521,28/08/2012,10038
+63,Outside 6,Outside,Ambient,100,Sandy clay loam,No,1.81,Yes,First,23/08/2012,120.46,109.75,9.758542141,17.66296128,28/08/2012,11570
+63,Outside 6,Outside,Ambient,125,Sandy clay loam,No,1.76,Yes,First,23/08/2012,70.23,63.58,10.45926392,18.4083045,28/08/2012,11739
+63,Outside 6,Outside,Ambient,150,Sandy clay loam,No,1.79,Yes,First,23/08/2012,73.54,64.1,14.72698908,26.36131045,28/08/2012,13248
+63,Outside 6,Outside,Ambient,200,Sandy clay loam,No,1.82,Yes,First,23/08/2012,183.59,161.84,13.43919921,24.45934256,28/08/2012,13013
+63,Outside 6,Outside,Ambient,400,Clay,No,1.57,Yes,First,24/08/2012,167.48,143.48,16.72706997,26.26149986,28/08/2012,13622
+63,Outside 6,Outside,Ambient,450,Clay,No,1.66,Yes,First,24/08/2012,66.89,58.08,15.16873278,25.18009642,28/08/2012,13320
+13,Outside 1,Outside,Ambient,25,Loamy sand,No,1.57,Yes,Second,10/10/2012,190.47,187.44,1.616517286,2.537932138,9/10/2012,3502
+13,Outside 1,Outside,Ambient,50,Loamy sand,No,1.7,Yes,Second,10/10/2012,129.1,110.65,16.67419792,28.34613647,9/10/2012,12711
+13,Outside 1,Outside,Ambient,75,Sandy clay loam,No,1.76,Yes,Second,10/10/2012,118.95,107.63,10.5175137,18.51082412,9/10/2012,11355
+13,Outside 1,Outside,Ambient,100,Sandy clay loam,No,1.91,Yes,Second,10/10/2012,148.04,136.89,8.145226094,15.55738184,9/10/2012,9680
+13,Outside 1,Outside,Ambient,125,Sandy clay loam,No,1.8,Yes,Second,10/10/2012,116.22,109,6.623853211,11.92293578,9/10/2012,9254
+13,Outside 1,Outside,Ambient,150,Sandy clay loam,No,1.87,Yes,Second,10/10/2012,202.09,190.02,6.351962951,11.87817072,9/10/2012,9330
+13,Outside 1,Outside,Ambient,200,Sandy clay loam,No,1.73,Yes,Second,10/10/2012,181.44,167.85,8.096514745,14.00697051,9/10/2012,12589
+13,Outside 1,Outside,Ambient,250,Sandy clay loam,No,1.72,Yes,Second,10/10/2012,172.63,151.07,14.27152975,24.54703118,9/10/2012,11702
+13,Outside 1,Outside,Ambient,300,Sandy clay loam,No,1.47,Yes,Second,10/10/2012,123.42,112.62,9.589770911,14.09696324,9/10/2012,9589
+13,Outside 1,Outside,Ambient,350,Clay,No,1.71,Yes,Second,10/10/2012,167.67,148.4,12.9851752,22.2046496,9/10/2012,10573
+13,Outside 1,Outside,Ambient,400,Clay,No,1.6,Yes,Second,10/10/2012,191.19,150.3,27.20558882,43.52894212,9/10/2012,14086
+13,Outside 1,Outside,Ambient,450,Clay,No,1.71,Yes,Second,10/10/2012,173.75,149.72,16.04995993,27.44543147,9/10/2012,13216
+43,Outside 4,Outside,Ambient,25,Loamy sand,No,1.59,Yes,Second,17/10/2012,194.45,184.12,5.610471432,8.920649576,15/10/2012,5906
+43,Outside 4,Outside,Ambient,50,Loamy sand,No,1.65,Yes,Second,17/10/2012,153.1,144.73,5.783182478,9.542251088,15/10/2012,7448
+43,Outside 4,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Second,17/10/2012,146.36,125.52,16.6029318,29.55321861,15/10/2012,16380
+43,Outside 4,Outside,Ambient,100,Sandy clay loam,No,1.74,Yes,Second,17/10/2012,66.61,60.25,10.5560166,18.36746888,15/10/2012,12103
+43,Outside 4,Outside,Ambient,125,Sandy clay loam,No,1.52,Yes,Second,17/10/2012,193.4,174.18,11.03456195,16.77253416,15/10/2012,11590
+43,Outside 4,Outside,Ambient,150,Sandy clay loam,No,1.82,Yes,Second,17/10/2012,199.87,182.28,9.649989028,17.56298003,15/10/2012,11787
+43,Outside 4,Outside,Ambient,200,Sandy clay loam,No,1.74,Yes,Second,17/10/2012,219.86,192.01,14.50445289,25.23774803,15/10/2012,14551
+43,Outside 4,Outside,Ambient,250,Sandy clay loam,No,1.73,Yes,Second,17/10/2012,141.79,124.33,14.04327194,24.29486045,15/10/2012,10861
+43,Outside 4,Outside,Ambient,300,Sandy clay loam,No,1.63,Yes,Second,17/10/2012,85.5,78.23,9.29311006,15.1477694,15/10/2012,10764
+43,Outside 4,Outside,Ambient,350,Clay,No,1.65,Yes,Second,17/10/2012,161.15,136.04,18.45780653,30.45538077,15/10/2012,11445
+43,Outside 4,Outside,Ambient,400,Clay,No,1.57,Yes,Second,17/10/2012,158.83,138.49,14.68698101,23.05856018,15/10/2012,10773
+43,Outside 4,Outside,Ambient,450,Clay,No,1.61,Yes,Second,17/10/2012,167.35,132.05,26.73229837,43.03900038,15/10/2012,15432
+63,Outside 6,Outside,Ambient,25,Loamy sand,No,1.55,Yes,Second,10/10/2012,110.59,105.32,5.003797949,7.755886821,9/10/2012,5836
+63,Outside 6,Outside,Ambient,50,Loamy sand,No,1.75,Yes,Second,10/10/2012,104.86,100.63,4.203517838,7.356156216,9/10/2012,6267
+63,Outside 6,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Second,10/10/2012,106.79,97.09,9.99073025,17.78349985,9/10/2012,10770
+63,Outside 6,Outside,Ambient,100,Sandy clay loam,No,1.81,Yes,Second,10/10/2012,65.19,60.95,6.956521739,12.59130435,9/10/2012,11290
+63,Outside 6,Outside,Ambient,125,Sandy clay loam,No,1.76,Yes,Second,10/10/2012,165.67,152.42,8.693084897,15.29982942,9/10/2012,11679
+63,Outside 6,Outside,Ambient,150,Sandy clay loam,No,1.79,Yes,Second,10/10/2012,146.76,136.34,7.642658061,13.68035793,9/10/2012,13017
+63,Outside 6,Outside,Ambient,200,Sandy clay loam,No,1.82,Yes,Second,10/10/2012,198.44,180.04,10.21995112,18.60031104,9/10/2012,12871
+63,Outside 6,Outside,Ambient,250,Sandy clay loam,No,1.78,Yes,Second,10/10/2012,162.47,141.8,14.57686883,25.94682652,9/10/2012,12104
+63,Outside 6,Outside,Ambient,300,Sandy clay loam,No,1.77,Yes,Second,10/10/2012,112.85,98.4,14.68495935,25.99237805,9/10/2012,12127
+63,Outside 6,Outside,Ambient,350,Clay,No,1.75,Yes,Second,10/10/2012,147.74,130.91,12.85616072,22.49828126,9/10/2012,10586
+63,Outside 6,Outside,Ambient,400,Clay,No,1.57,Yes,Second,10/10/2012,203.69,171.23,18.95695848,29.76242481,9/10/2012,13611
+63,Outside 6,Outside,Ambient,450,Clay,No,1.66,Yes,Second,10/10/2012,194.14,168.2,15.42211653,25.60071344,9/10/2012,13250
+13,Outside 1,Outside,Ambient,25,Loamy sand,No,1.57,Yes,Third,7/06/2013,177.54,171.66,3.425375743,5.377839916,11/06/2013,4830
+13,Outside 1,Outside,Ambient,50,Loamy sand,No,1.7,Yes,Third,7/06/2013,172.46,152.09,13.3933855,22.76875534,11/06/2013,12866
+13,Outside 1,Outside,Ambient,75,Sandy clay loam,No,1.76,Yes,Third,7/06/2013,210.99,191.9,9.947889526,17.50828557,11/06/2013,10766
+13,Outside 1,Outside,Ambient,100,Sandy clay loam,No,1.91,Yes,Third,7/06/2013,174.35,160.52,8.615748816,16.45608024,11/06/2013,8888
+13,Outside 1,Outside,Ambient,125,Sandy clay loam,No,1.8,Yes,Third,7/06/2013,214.05,199.2,7.454819277,13.4186747,11/06/2013,8653
+13,Outside 1,Outside,Ambient,150,Sandy clay loam,No,1.87,Yes,Third,7/06/2013,194.04,181.23,7.068366165,13.21784473,11/06/2013,9075
+13,Outside 1,Outside,Ambient,200,Sandy clay loam,No,1.73,Yes,Third,7/06/2013,219.25,192.35,13.98492332,24.19391734,11/06/2013,12446
+43,Outside 4,Outside,Ambient,25,Loamy sand,No,1.59,Yes,Third,7/06/2013,169.88,156.1,8.827674568,14.03600256,11/06/2013,6199
+43,Outside 4,Outside,Ambient,50,Loamy sand,No,1.65,Yes,Third,7/06/2013,204.49,196.41,4.113843491,6.78784176,11/06/2013,7609
+43,Outside 4,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Third,7/06/2013,243.47,215.64,12.90576887,22.9722686,11/06/2013,15468
+43,Outside 4,Outside,Ambient,100,Sandy clay loam,No,1.74,Yes,Third,7/06/2013,185.15,169.31,9.355619869,16.27877857,11/06/2013,10411
+43,Outside 4,Outside,Ambient,125,Sandy clay loam,No,1.52,Yes,Third,7/06/2013,193.36,178.94,8.058567117,12.24902202,11/06/2013,9596
+43,Outside 4,Outside,Ambient,150,Sandy clay loam,No,1.82,Yes,Third,7/06/2013,194.32,180.33,7.757999224,14.11955859,11/06/2013,9895
+43,Outside 4,Outside,Ambient,200,Sandy clay loam,No,1.74,Yes,Third,7/06/2013,219.64,194.39,12.9893513,22.60147127,11/06/2013,12499
+43,Outside 4,Outside,Ambient,250,Sandy clay loam,No,1.73,Yes,Third,7/06/2013,194.05,181.23,7.073884015,12.23781935,11/06/2013,10557
+63,Outside 6,Outside,Ambient,25,Loamy sand,No,1.55,Yes,Third,7/06/2013,119.45,113.34,5.390859361,8.35583201,11/06/2013,6037
+63,Outside 6,Outside,Ambient,50,Loamy sand,No,1.75,Yes,Third,7/06/2013,188.42,182.64,3.164695576,5.538217258,11/06/2013,4810
+63,Outside 6,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Third,7/06/2013,192.22,175.37,9.608256828,17.10269715,11/06/2013,9715
+63,Outside 6,Outside,Ambient,100,Sandy clay loam,No,1.81,Yes,Third,7/06/2013,144.44,135.18,6.850125758,12.39872762,11/06/2013,9653
+63,Outside 6,Outside,Ambient,125,Sandy clay loam,No,1.76,Yes,Third,7/06/2013,230.81,213.78,7.966133408,14.0203948,11/06/2013,9963
+63,Outside 6,Outside,Ambient,150,Sandy clay loam,No,1.79,Yes,Third,7/06/2013,230.29,209.91,9.708922872,17.37897194,11/06/2013,11669
+63,Outside 6,Outside,Ambient,200,Sandy clay loam,No,1.82,Yes,Third,7/06/2013,229.33,208.21,10.14360501,18.46136113,11/06/2013,12193
+13,Outside 1,Outside,Ambient,25,Loamy sand,No,1.57,Yes,Fourth,24/09/2013,190,186.97,1.620580842,2.544311922,24/09/2013,3657
+13,Outside 1,Outside,Ambient,50,Loamy sand,No,1.7,Yes,Fourth,24/09/2013,220.93,193.17,14.37076151,24.43029456,24/09/2013,12485
+13,Outside 1,Outside,Ambient,75,Sandy clay loam,No,1.76,Yes,Fourth,24/09/2013,238.53,214.1,11.41055582,20.08257823,24/09/2013,10420
+13,Outside 1,Outside,Ambient,100,Sandy clay loam,No,1.91,Yes,Fourth,24/09/2013,230.82,210.22,9.79925792,18.71658263,24/09/2013,8522
+13,Outside 1,Outside,Ambient,125,Sandy clay loam,No,1.8,Yes,Fourth,24/09/2013,385.68,366.65,5.19023592,9.342424656,24/09/2013,8600
+13,Outside 1,Outside,Ambient,150,Sandy clay loam,No,1.87,Yes,Fourth,24/09/2013,361.81,331.38,9.182811274,17.17185708,24/09/2013,8967
+13,Outside 1,Outside,Ambient,200,Sandy clay loam,No,1.73,Yes,Fourth,24/09/2013,271.24,245.88,10.3139743,17.84317553,24/09/2013,12329
+13,Outside 1,Outside,Ambient,250,Sandy clay loam,No,1.72,Yes,Fourth,24/09/2013,302.57,268.11,12.8529335,22.10704562,24/09/2013,11390
+43,Outside 4,Outside,Ambient,25,Loamy sand,No,1.59,Yes,Fourth,24/09/2013,190.75,186.61,2.218530625,3.527463694,24/09/2013,2474
+43,Outside 4,Outside,Ambient,50,Loamy sand,No,1.65,Yes,Fourth,24/09/2013,187.41,182.52,2.679158448,4.42061144,24/09/2013,4813
+43,Outside 4,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Fourth,24/09/2013,276.17,249.96,10.48567771,18.66450632,24/09/2013,14354
+43,Outside 4,Outside,Ambient,100,Sandy clay loam,No,1.74,Yes,Fourth,24/09/2013,210.69,197.21,6.835353177,11.89351453,24/09/2013,8939
+43,Outside 4,Outside,Ambient,125,Sandy clay loam,No,1.52,Yes,Fourth,24/09/2013,258.07,241.33,6.936559897,10.54357104,24/09/2013,8348
+43,Outside 4,Outside,Ambient,150,Sandy clay loam,No,1.82,Yes,Fourth,24/09/2013,251.85,236.98,6.274791122,11.42011984,24/09/2013,9048
+43,Outside 4,Outside,Ambient,200,Sandy clay loam,No,1.74,Yes,Fourth,24/09/2013,303.23,275.48,10.07332656,17.52758821,24/09/2013,11818
+43,Outside 4,Outside,Ambient,250,Sandy clay loam,No,1.73,Yes,Fourth,24/09/2013,317.17,290.21,9.28982461,16.07139657,24/09/2013,10188
+63,Outside 6,Outside,Ambient,25,Loamy sand,No,1.55,Yes,Fourth,24/09/2013,187.03,182.49,2.487807551,3.856101704,24/09/2013,3907
+63,Outside 6,Outside,Ambient,50,Loamy sand,No,1.75,Yes,Fourth,24/09/2013,151.93,148.25,2.482293423,4.344013491,24/09/2013,3913
+63,Outside 6,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Fourth,24/09/2013,167.59,153.6,9.108072917,16.21236979,24/09/2013,9155
+63,Outside 6,Outside,Ambient,100,Sandy clay loam,No,1.81,Yes,Fourth,24/09/2013,198.17,187.12,5.905301411,10.68859555,24/09/2013,9216
+63,Outside 6,Outside,Ambient,125,Sandy clay loam,No,1.76,Yes,Fourth,24/09/2013,474.96,446.65,6.338296205,11.15540132,24/09/2013,9376
+63,Outside 6,Outside,Ambient,150,Sandy clay loam,No,1.79,Yes,Fourth,24/09/2013,272.03,247.22,10.03559583,17.96371653,24/09/2013,11159
+63,Outside 6,Outside,Ambient,200,Sandy clay loam,No,1.82,Yes,Fourth,24/09/2013,192.18,175.9,9.25525867,16.84457078,24/09/2013,11670
+63,Outside 6,Outside,Ambient,250,Sandy clay loam,No,1.78,Yes,Fourth,24/09/2013,309.84,281.07,10.2358843,18.21987405,24/09/2013,10629
+13,Outside 1,Outside,Ambient,25,Loamy sand,No,1.57,Yes,Fifth,14/02/2014,189.13,186.69,1.306979485,2.051957791,13/02/2014,3056
+13,Outside 1,Outside,Ambient,50,Loamy sand,No,1.7,Yes,Fifth,14/02/2014,142.83,126.62,12.80208498,21.76354446,13/02/2014,12130
+13,Outside 1,Outside,Ambient,75,Sandy clay loam,No,1.76,Yes,Fifth,14/02/2014,173.35,156.41,10.83050956,19.06169682,13/02/2014,10024
+13,Outside 1,Outside,Ambient,100,Sandy clay loam,No,1.91,Yes,Fifth,14/02/2014,249.54,236.57,5.48252103,10.47161517,13/02/2014,8238
+43,Outside 4,Outside,Ambient,25,Loamy sand,No,1.59,Yes,Fifth,14/02/2014,252.05,248.8,1.306270096,2.076969453,13/02/2014,1760
+43,Outside 4,Outside,Ambient,50,Loamy sand,No,1.65,Yes,Fifth,14/02/2014,282.31,274.28,2.92766516,4.830647513,13/02/2014,4464
+43,Outside 4,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Fifth,14/02/2014,136.57,117.69,16.04214462,28.55501742,13/02/2014,13940
+43,Outside 4,Outside,Ambient,100,Sandy clay loam,No,1.74,Yes,Fifth,14/02/2014,274.47,258.88,6.022095179,10.47844561,13/02/2014,8490
+63,Outside 6,Outside,Ambient,25,Loamy sand,No,1.55,Yes,Fifth,14/02/2014,336.44,331.87,1.377045229,2.134420104,13/02/2014,3364
+63,Outside 6,Outside,Ambient,50,Loamy sand,No,1.75,Yes,Fifth,14/02/2014,364.19,357.69,1.817216025,3.180128044,13/02/2014,3740
+63,Outside 6,Outside,Ambient,75,Sandy clay loam,No,1.78,Yes,Fifth,14/02/2014,330.38,303.73,8.774240279,15.6181477,13/02/2014,8845
+63,Outside 6,Outside,Ambient,100,Sandy clay loam,No,1.81,Yes,Fifth,14/02/2014,223.49,209.86,6.494806061,11.75559897,13/02/2014,9077
