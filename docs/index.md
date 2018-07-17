@@ -16,5 +16,6 @@ for x in range(1, 10):
     print(x);
 ```
 
-#### A link ####
-[link to notebook](docs/testjup.md)
+#### Some links ####
+[link to md notebook](testjup.md)
+[link to html notebook](testjup.html)
