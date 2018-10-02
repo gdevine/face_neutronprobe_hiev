@@ -108,6 +108,7 @@ venv.bak/
 
 # Data files
 Data/
+Data-bu/
 Backups/
 Renamed/
 *.csv

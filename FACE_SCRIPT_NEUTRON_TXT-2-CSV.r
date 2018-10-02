@@ -24,11 +24,12 @@ calib_coeff <- function() {
 # Read a neutron probe .txt file and convert to long-form data.frame
 readfile <- function(filename, write_to_file=T) {
   print(filename)
-  dat <- read.table(args[1],skip=25)
+  dat <- read.table(args[1],skip=24)
   names(dat) <- c("Probe.ID","C","missing","450", "400", "350", "300", "250", "200", "150", "125", "100", "75", "50", "25")
   datestr <- substr(filename,nchar(filename)-9,nchar(filename)-4)
-  dat$Date <- as.Date(parse_date_time(datestr,"d m y"))
-  dat.long <- reshape(dat, varying = c(names(dat)[4:15]), 
+  #dat$Date <- as.Date(parse_date_time(datestr,"d m y"))
+  dat$Date <- as.Date(parse_date_time(datestr,"y m d"))
+  dat.long <- reshape(dat, varying = c(names(dat)[4:15]),
                       idvar = c("Date", "Probe.ID"), 
                       timevar = "Depth", time=c(names(dat)[4:15]), 
                       v.names = "NP.count", direction="long") 

@@ -2,8 +2,8 @@
 """
 Upload Neutron Probe data from EucFACE using the HievPy library. The upload will happen in two steps:
 
-1. Raw data in the Data folder will be copied to a folder called 'Renamed' and renamed to match naming conventions.
-   A copy of the file will also be made in the backups folder
+1. Raw data in the Data folder will be copied to a folder called 'Renamed' and renamed to match naming conventions,
+   and restructured to be in a clean CSV format. A copy of the file will also be made in the backups folder
 2. Data will be uploaded to HIEv (both the Raw txt file and the L1 csv file) from the 'Renamed' folder and upon
    completion will be removed from both the 'Data' folder and the 'Renamed' folder
 
@@ -138,49 +138,55 @@ for file in os.listdir(data_dir):
         renamed_file_path = os.path.join(renamed_dir, renamed_file)
         # Check if file already exists in the Renamed folder
         if os.path.exists(renamed_file_path):
-            log.write('\n*Warning: File ' + renamed_file + ' already exists in Renamed folder')
-            continue
-        shutil.copyfile(data_file_path, renamed_file_path)
-        log.write('\n*Info: File ' + file + ' moved to Renamed folder and renamed to ' + renamed_file)
+            log.write('\n*Warning: File ' + renamed_file + ' already exists in Renamed folder - skipping this file')
+        else:
+            shutil.copyfile(data_file_path, renamed_file_path)
+            log.write('\n*Info: File ' + file + ' moved to Renamed folder and renamed to ' + renamed_file)
 
-        # 3. Convert the renamed file to L1 CSV format and rename accordingly
-        l1_file = rename_csv_file(renamed_file)
-        l1_file_path = os.path.join(renamed_dir, l1_file)
-        if os.path.exists(l1_file_path):
-            log.write('\n*Warning: File ' + l1_file + ' already exists in Renamed folder')
-            continue
-        shutil.copyfile(renamed_file_path, l1_file_path)
-        with open(l1_file_path, 'r') as f1:
-            txt2csv(f1.name)
-        log.write('\n*Info: Converted ' + file + ' to CSV file and renamed accordingly')
+            # 3. Convert the renamed file to L1 CSV format and rename accordingly
+            l1_file = rename_csv_file(renamed_file)
+            l1_file_path = os.path.join(renamed_dir, l1_file)
+            if os.path.exists(l1_file_path):
+                log.write('\n*Warning: File ' + l1_file + ' already exists in Renamed folder')
+                continue
+            shutil.copyfile(renamed_file_path, l1_file_path)
+            try:
+                with open(l1_file_path, 'r') as f1:
+                    txt2csv(f1.name)
+                log.write('\n*Info: Converted ' + file + ' to CSV file and renamed accordingly')
+            except Exception as e:
+                log.write('\n*Error: Could not convert text file to CSV file. Error: ' + str(e))
+                continue
 
-        # 4. Grab the start date/end date from the file name and then upload both the Raw and L1 files to HIEv
-        try:
-            start_datetime, end_datetime = get_datetimes(file)
-            metadata_r["start_time"] = start_datetime
-            metadata_r["end_time"] = end_datetime
-            metadata_l1["start_time"] = start_datetime
-            metadata_l1["end_time"] = end_datetime
-            metadata_l1["parent_filenames[]"] = [renamed_file, 'FACE_SCRIPT_NEUTRON_TXT-2-CSV.zip']
-            upload = hp.upload(api_token, renamed_file_path, metadata_r)
-            log.write('\n*Info: File ' + renamed_file + ' successfully uploaded to HIEv')
-            upload = hp.upload(api_token, l1_file_path, metadata_l1)
-            log.write('\n*Info: File ' + l1_file + ' successfully uploaded to HIEv')
-        except Exception as e:
-            log.write('\n*Error: Could not upload file ' + file + ' to HIEv. Error: ' + str(e))
-            continue
+            # 4. Grab the start date/end date from the file name and then upload both the Raw and L1 files to HIEv
+            try:
+                start_datetime, end_datetime = get_datetimes(file)
+                metadata_r["start_time"] = start_datetime
+                metadata_r["end_time"] = end_datetime
+                metadata_l1["start_time"] = start_datetime
+                metadata_l1["end_time"] = end_datetime
+                metadata_l1["parent_filenames[]"] = [renamed_file, 'FACE_SCRIPT_NEUTRON_TXT-TO-CSV.zip']
+                upload = hp.upload(api_token, renamed_file_path, metadata_r)
+                log.write('\n*Info: File ' + renamed_file + ' successfully uploaded to HIEv')
+                upload = hp.upload(api_token, l1_file_path, metadata_l1)
+                log.write('\n*Info: File ' + l1_file + ' successfully uploaded to HIEv')
+            except Exception as e:
+                log.write('\n*Error: Could not upload file ' + file + ' to HIEv. Error: ' + str(e))
+                continue
 
-        # 5. Remove the file from both the data and Renamed folders
-        os.remove(data_file_path)
-        os.remove(renamed_file_path)
-        os.remove(l1_file_path)
-        log.write('\n*Info: File ' + file + ' cleaned out of Data and Renamed folders')
-        # Increment counter
-        file_counter += 1
+            # 5. Remove the file from both the data and Renamed folders
+            os.remove(data_file_path)
+            os.remove(renamed_file_path)
+            os.remove(l1_file_path)
+            log.write('\n*Info: File ' + file + ' cleaned out of Data and Renamed folders')
+            # Increment counter
+            file_counter += 1
+            log.write('')
 
     else:
         # This file does not match the FA naming convention
         log.write('\n*Warning: The file named ' + file + ' does not match FA naming convention - ignoring')
+        log.write('')
 
 
 log.write('\n*Info: Run Complete. ' + str(file_counter) + ' successful file pairs (Raw and L1) uploaded to HIEv')
