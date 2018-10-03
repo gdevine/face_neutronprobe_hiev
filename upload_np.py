@@ -3,11 +3,14 @@
 Upload Neutron Probe data from EucFACE using the HievPy library. The upload will happen in two steps:
 
 1. Raw data in the Data folder will be copied to a folder called 'Renamed' and renamed to match naming conventions,
-   and restructured to be in a clean CSV format. A copy of the file will also be made in the backups folder
+   and restructured to be in a clean CSV format. A copy of the file will also be made in the Backups folder
 2. Data will be uploaded to HIEv (both the Raw txt file and the L1 csv file) from the 'Renamed' folder and upon
-   completion will be removed from both the 'Data' folder and the 'Renamed' folder
+   completion data will be removed from both the 'Data' folder and the 'Renamed' folder, leaving only a copy in
+   the Backups folder.
 
 * Data to upload should be in a folder called 'Data' at the same level as this script
+* A file named credentials.py needs to be generated containing a line:
+       hievapikey = 'My_API_Key'
 
 """
 
@@ -115,7 +118,7 @@ def txt2csv(infile):
     """
 
     command = 'Rscript'
-    path2script = os.path.join(cwd, 'FACE_SCRIPT_NEUTRON_TXT-2-CSV.r')
+    path2script = os.path.join(cwd, 'RScript', 'FACE_SCRIPT_NEUTRON_TXT-2-CSV.r')
     args = [infile]
 
     cmd = [command, path2script] + args
