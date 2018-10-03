@@ -21,10 +21,11 @@ import shutil
 import hievpy as hp
 from datetime import datetime
 import subprocess
+import credentials
 
 
 # Set the API token for HIEv access
-api_token = os.environ['HIEV_API_KEY']
+api_token = credentials.hievapikey
 
 # Get the current path
 cwd = os.getcwd()

@@ -124,3 +124,6 @@ log.txt
 /FACE_SCRIPT_NEUTRON_TXT-2-CSV.zip
 !/Bulk.den.csv
 !/NP.cal2.csv
+
+# Credentials
+credentials.py
