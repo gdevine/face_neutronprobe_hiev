@@ -2,13 +2,12 @@
 """
 Upload Neutron Probe data from EucFACE using the HievPy library. The upload will happen in two steps:
 
-1. Raw data in the Data folder will be copied to a folder called 'Renamed' and renamed to match naming conventions,
-   and restructured to be in a clean CSV format. A copy of the file will also be made in the Backups folder
+1. Raw data in the named 'Data' folder will be copied to a folder called 'Renamed' and renamed to match naming
+   conventions, and restructured to be in a clean CSV format. A copy of the file will also be made in the Backups folder
 2. Data will be uploaded to HIEv (both the Raw txt file and the L1 csv file) from the 'Renamed' folder and upon
    completion data will be removed from both the 'Data' folder and the 'Renamed' folder, leaving only a copy in
    the Backups folder.
 
-* Data to upload should be in a folder called 'Data' at the same level as this script
 * A file named credentials.py needs to be generated containing a line:
        hievapikey = 'My_API_Key'
 
@@ -33,17 +32,10 @@ api_token = credentials.hievapikey
 # Get the current path
 cwd = os.getcwd()
 
-# Check if necessary folders are in place and create if not
-if not os.path.exists(os.path.join(cwd, 'Data')):
-    os.mkdir(os.path.join(cwd, 'Data'))
-if not os.path.exists(os.path.join(cwd, 'Renamed')):
-    os.mkdir(os.path.join(cwd, 'Renamed'))
-if not os.path.exists(os.path.join(cwd, 'Backups')):
-    os.mkdir(os.path.join(cwd, 'Backups'))
-
-data_dir = os.path.join(cwd, 'Data')
-renamed_dir = os.path.join(cwd, 'Renamed')
-backups_dir = os.path.join(cwd, 'Backups')
+data_dir = 'Z:/WORKING_DATA/EUCFACE/PROJECTS/NeutronProbes/Data/'
+renamed_dir = 'Z:/WORKING_DATA/EUCFACE/PROJECTS/NeutronProbes/Renamed/'
+backups_dir = 'Z:/WORKING_DATA/EUCFACE/PROJECTS/NeutronProbes/Backups/'
+rscript_dir = 'C:/Users/30036712/scripts/HIEv/face_neutronprobe_hiev-master/RScript/'
 
 
 # -- Open log file for writing and append date/time stamp into file for a new entry
@@ -53,26 +45,24 @@ log.write('\n\n------------  Begin: '+datetime.now().strftime('%Y-%m-%d %H:%M:%S
 
 # Set metadata for all uploads (raw text format and level 1 CSV)
 metadata_r = {"experiment_id": 31,
-            "type": "RAW",
-            "description": "Raw Neutron Probe soil moisture data (in Text format) measured approximately every three \
+              "type": "RAW",
+              "description": "Raw Neutron Probe soil moisture data (in Text format) measured approximately every three \
                            weeks, where each file represents the reading taken on the date identified in the \
                            filename (or in the metadata). Measurements are taken across all rings at the EucFACE \
-                           experiment. Converted Level 1 CSV versions of this data can also be found in HIEv (See "
-                           "associated data)",
-            "creator_email": "vinod.kumar@uws.edu.au",
-            "label_names": '"Neutron Probe","Soil Moisture"',
-            "related_websites": '"https://www.westernsydney.edu.au/hie"',
-            }
+                           experiment. Converted Level 1 CSV versions of this data can also be found in HIEv (See \
+                           associated data)",
+              "creator_email": "vinod.kumar@uws.edu.au",
+              "label_names": '"Neutron Probe","Soil Moisture"',
+              "related_websites": '"https://www.westernsydney.edu.au/hie"', }
 metadata_l1 = {"experiment_id": 31,
-            "type": "PROCESSED",
-            "description": "Level 1 Neutron Probe soil moisture data (in CSV format) from the EucFACE site. This file \
+               "type": "PROCESSED",
+               "description": "Level 1 Neutron Probe soil moisture data (in CSV format) from the EucFACE site. This file \
                            has been generated from the associated R script file (created by Teresa Gimeno) that \
                            converts the raw text format (see associated raw .txt file) to a more readable CSV format.",
-            "creator_email": "g.devine@uws.edu.au",
-            "label_names": '"Neutron Probe","Soil Moisture"',
-            "contributor_names[]": ['Teresa Gimeno, teresa.gimeno@bc3research.org'],
-            "related_websites": '"https://www.westernsydney.edu.au/hie"',
-            }
+               "creator_email": "g.devine@uws.edu.au",
+               "label_names": '"Neutron Probe","Soil Moisture"',
+               "contributor_names[]": ['Teresa Gimeno, teresa.gimeno@bc3research.org'],
+               "related_websites": '"https://www.westernsydney.edu.au/hie"', }
 
 
 def rename_file(infile):
@@ -117,8 +107,8 @@ def txt2csv(infile):
 
     """
 
-    command = 'Rscript'
-    path2script = os.path.join(cwd, 'RScript', 'FACE_SCRIPT_NEUTRON_TXT-2-CSV.r')
+    command = 'C:/Program Files/R/R-3.5.1/bin/Rscript.exe'
+    path2script = os.path.join(rscript_dir, 'FACE_SCRIPT_NEUTRON_TXT-2-CSV.r')
     args = [infile]
 
     cmd = [command, path2script] + args
@@ -128,7 +118,8 @@ def txt2csv(infile):
 file_counter = 0
 log.write('\n*Info: Looping over files in Data folder....')
 for file in os.listdir(data_dir):
-    if file.startswith('FA') and file.split('.')[1] == 'TXT':
+    if file.startswith('FA') and file.split('.')[1] in ['TXT', 'txt']:
+        log.write('\n')
         log.write('\n*Info: Match found: ' + file)
         data_file_path = os.path.join(data_dir, file)
         backups_file_path = os.path.join(backups_dir, file)
@@ -170,9 +161,9 @@ for file in os.listdir(data_dir):
                 metadata_l1["start_time"] = start_datetime
                 metadata_l1["end_time"] = end_datetime
                 metadata_l1["parent_filenames[]"] = [renamed_file, 'FACE_SCRIPT_NEUTRON_TXT-TO-CSV.zip']
-                upload = hp.upload(api_token, renamed_file_path, metadata_r)
+                hp.upload(api_token, renamed_file_path, metadata_r)
                 log.write('\n*Info: File ' + renamed_file + ' successfully uploaded to HIEv')
-                upload = hp.upload(api_token, l1_file_path, metadata_l1)
+                hp.upload(api_token, l1_file_path, metadata_l1)
                 log.write('\n*Info: File ' + l1_file + ' successfully uploaded to HIEv')
             except Exception as e:
                 log.write('\n*Error: Could not upload file ' + file + ' to HIEv. Error: ' + str(e))

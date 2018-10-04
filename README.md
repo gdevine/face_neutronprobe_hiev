@@ -4,7 +4,7 @@ Python script to convert Raw Neutron Probe data to level 1 CSV format and upload
 
 __Implementation__
 
-Data (that should be named FADDMMYY by default) to be uploaded into HIEv should be placed in a folder named Data that sits at the same level as the main upload_np.py script.
+Data (that should be named FADDMMYY.txt or FASDDMMYY.TXT by default) to be uploaded into HIEv should be placed in a folder named 'Data' - the path of which can be set in the main script, **upload_np.py**.
 The script needs to be able to access a HIEv API key stored in a credentials.py file at the top level.
 
 __Prerequisites__

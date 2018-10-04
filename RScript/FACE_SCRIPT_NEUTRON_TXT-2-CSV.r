@@ -13,7 +13,7 @@ print(args[1])
 calib_coeff <- function() {
   # Calibration coefficients according to the in-house empirical calibration. 
   # Last sample round 24-09-2013
-  NP.cal <- read.csv("NP.cal2.csv")
+  NP.cal <- read.csv("RScript/NP.cal2.csv")
   #calibration for clay and non-clay soils is slightly different
   up <- lm(VWC ~ NP.count, data = subset(NP.cal, Texture != "Clay"))
   clay <- lm(VWC ~ NP.count, data = subset(NP.cal, Texture == "Clay"))
@@ -54,7 +54,7 @@ readfile <- function(filename, write_to_file=T) {
   np <- rbind(np.upper, np.clay)
   
   #merge with Bulk density data - use more recent? 
-  bulkDen <- read.csv('Bulk.den.csv')[, c(1, 2, 5)]
+  bulkDen <- read.csv('RScript/Bulk.den.csv')[, c(1, 2, 5)]
   np <- merge(np, bulkDen, by.x = c("Probe.ID", "Depth"),by.y = c("Probe.ID", "Up.depth"), 
               all.x = TRUE, all.y = FALSE)
   
